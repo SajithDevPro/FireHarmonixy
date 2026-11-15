@@ -1,0 +1,340 @@
+{
+  "_note": "Reference catalogue, not data. Edit this file to change the satellites, map regions, covered places and upload rules; nothing here is a measurement.",
+  "title": "FireHarmonix",
+  "regions": [
+    {
+      "id": "global",
+      "label": "Global",
+      "bbox": null
+    },
+    {
+      "id": "south-asia",
+      "label": "South Asia",
+      "bbox": [
+        60,
+        5,
+        98,
+        37.5
+      ]
+    },
+    {
+      "id": "sri-lanka",
+      "label": "Sri Lanka",
+      "bbox": [
+        79.5,
+        5.8,
+        82,
+        10
+      ]
+    },
+    {
+      "id": "se-asia",
+      "label": "Southeast Asia",
+      "bbox": [
+        92,
+        -11,
+        141,
+        24
+      ]
+    },
+    {
+      "id": "africa",
+      "label": "Africa",
+      "bbox": [
+        -20,
+        -35,
+        52,
+        38
+      ]
+    },
+    {
+      "id": "south-america",
+      "label": "South America",
+      "bbox": [
+        -82,
+        -56,
+        -34,
+        13
+      ]
+    },
+    {
+      "id": "north-america",
+      "label": "North America",
+      "bbox": [
+        -170,
+        14,
+        -50,
+        72
+      ]
+    },
+    {
+      "id": "europe",
+      "label": "Europe",
+      "bbox": [
+        -11,
+        34,
+        45,
+        71
+      ]
+    },
+    {
+      "id": "australia",
+      "label": "Australia",
+      "bbox": [
+        112,
+        -45,
+        154,
+        -10
+      ]
+    }
+  ],
+  "satellites": [
+    {
+      "id": "N20",
+      "label": "N20",
+      "sensor": "VIIRS",
+      "color": "var(--sat-N20)",
+      "hex": "#f08a3c"
+    },
+    {
+      "id": "N21",
+      "label": "N21",
+      "sensor": "VIIRS",
+      "color": "var(--sat-N21)",
+      "hex": "#e2b23f"
+    },
+    {
+      "id": "SNPP",
+      "label": "SNPP",
+      "sensor": "VIIRS",
+      "color": "var(--sat-SNPP)",
+      "hex": "#d9667b"
+    },
+    {
+      "id": "Terra",
+      "label": "Terra",
+      "sensor": "MODIS",
+      "color": "var(--sat-Terra)",
+      "hex": "#45b5a6"
+    },
+    {
+      "id": "Aqua",
+      "label": "Aqua",
+      "sensor": "MODIS",
+      "color": "var(--sat-Aqua)",
+      "hex": "#5aa6e6"
+    }
+  ],
+  "places": [
+    {
+      "country": "Sri Lanka",
+      "districts": [
+        "Colombo",
+        "Gampaha",
+        "Kandy",
+        "Galle",
+        "Anuradhapura"
+      ],
+      "bbox": [
+        79.5,
+        5.8,
+        82,
+        10
+      ]
+    },
+    {
+      "country": "India",
+      "districts": [
+        "Tamil Nadu",
+        "Kerala",
+        "Maharashtra",
+        "Odisha"
+      ],
+      "bbox": [
+        68,
+        8,
+        97,
+        35
+      ]
+    },
+    {
+      "country": "Nepal",
+      "districts": [
+        "Bagmati",
+        "Gandaki"
+      ],
+      "bbox": [
+        80,
+        26,
+        88,
+        30
+      ]
+    },
+    {
+      "country": "Bangladesh",
+      "districts": [
+        "Dhaka",
+        "Khulna"
+      ],
+      "bbox": [
+        88,
+        21,
+        93,
+        26
+      ]
+    }
+  ],
+  "upload": {
+    "accept": [
+      ".csv",
+      ".json",
+      ".geojson"
+    ],
+    "max_mb": 25
+  },
+  "tag_explain": {
+    "OBS": "Value taken unchanged from a source record, or a direct count of such records",
+    "VD": "Supported by independent evidence of a different physical kind (tier 3)",
+    "REC": "Result of a FireHarmonix rule or method choice; the rule and its settings are shown with it",
+    "NV": "Not verified: no independent evidence has been recorded"
+  },
+  "vocab": {
+    "event_statuses": [
+      "CONFIRMED",
+      "SUPPORTED",
+      "CONFLICTING",
+      "UNVERIFIED",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "bands": [
+      "CORROBORATED",
+      "REPEATED",
+      "SINGLE_LOOK",
+      "CAUTION"
+    ],
+    "flags": [
+      {
+        "code": "SATURATED_MIR",
+        "label": "Saturated mid-infrared"
+      },
+      {
+        "code": "MIR_BELOW_TIR",
+        "label": "Mid-IR below thermal-IR"
+      },
+      {
+        "code": "MIR_VERY_LOW",
+        "label": "Mid-IR very low"
+      },
+      {
+        "code": "FRP_ZERO",
+        "label": "FRP zero"
+      },
+      {
+        "code": "LOW_CONFIDENCE",
+        "label": "Low confidence"
+      },
+      {
+        "code": "LARGE_FOOTPRINT",
+        "label": "Large footprint"
+      },
+      {
+        "code": "CONFIDENCE_ZERO",
+        "label": "Confidence zero"
+      }
+    ],
+    "evidence_kinds": [
+      {
+        "code": "OFFICIAL_INCIDENT",
+        "label": "Official incident report",
+        "tier": 3,
+        "desc": "Report issued by a fire or civil-protection authority."
+      },
+      {
+        "code": "GROUND_REPORT",
+        "label": "Ground report",
+        "tier": 3,
+        "desc": "Direct observation on the ground with a reference."
+      },
+      {
+        "code": "BURNED_AREA",
+        "label": "Burned-area mapping",
+        "tier": 3,
+        "desc": "Independent burned-area product for the same period."
+      },
+      {
+        "code": "HIGH_RES_IMAGERY",
+        "label": "Reviewed high-resolution imagery",
+        "tier": 3,
+        "desc": "Imagery reviewed by a person."
+      },
+      {
+        "code": "NEWS",
+        "label": "News or media report",
+        "tier": 3,
+        "desc": "Published report with a citable source."
+      },
+      {
+        "code": "STATIC_HEAT",
+        "label": "Known static heat source",
+        "tier": 3,
+        "desc": "Industry, flare or other permanent heat source."
+      },
+      {
+        "code": "OTHER_SENSOR",
+        "label": "Other thermal sensor",
+        "tier": 2,
+        "desc": "Another thermal sensor, same failure modes."
+      },
+      {
+        "code": "EFIRE_CONSISTENCY",
+        "label": "NOAA EFIRE consistency",
+        "tier": 0,
+        "desc": "Same-family product; consistency only."
+      }
+    ]
+  },
+  "country_bbox": {
+    "India": [
+      68,
+      8,
+      97,
+      35
+    ],
+    "Pakistan": [
+      61,
+      24,
+      77,
+      37
+    ],
+    "Nepal": [
+      80,
+      26,
+      88,
+      30
+    ],
+    "Bangladesh": [
+      88,
+      21,
+      93,
+      26
+    ],
+    "Sri Lanka": [
+      79.5,
+      5.8,
+      82,
+      10
+    ],
+    "Bhutan": [
+      88.7,
+      26.7,
+      92,
+      28.3
+    ],
+    "Afghanistan": [
+      60,
+      29,
+      75,
+      38.5
+    ]
+  }
+}
